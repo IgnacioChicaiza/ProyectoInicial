@@ -1,0 +1,34 @@
+<%- include ('./partials/_header'); %>
+<br><br><br><br>
+<div class="container">
+    <div class="row">
+        <div class="cool -md-5">
+            <div class="card">
+                <div class="card-body">
+                    <form action="/update/<%= data.id %>" method="post">
+
+                        <div class="form-group">
+                            <input type="text" name="nombre"  placeholder="cliente" value="<%= data.cliente %>" class="form-control">
+                        </div>
+        
+                        <div class="form-group">
+                            <input type="text" name="apellido" placeholder="modelo" value="<%= data.modelo %>" class="form-control">
+                        </div>
+        
+                        <div class="form-group">
+                            <input type="text" name="correo" placeholder="cantidad" value="<%= data.cantidad %>" class="form-control">
+                        </div>
+                        
+                        <div class="form-group">
+                            <input type="text" name="telefono" placeholder="Telefono" value="<%= data.telefono %>" class="form-control">
+                        </div>
+        
+                        <button type="submit" class="btn btn-outline-success"> Guardar Edicion</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<%- include ('./partials/_footer'); %>
